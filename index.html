@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Ratih Wulandari, S.Kom.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1C1917',     /* Deep Warm Black / Stone 900 */
+                            brown: '#78350F',    /* Rich Warm Brown / Amber 900 */
+                            accent: '#9A3412',   /* Rust / Orange Brown */
+                            light: '#FAFAFA',    /* Clean Soft Off-White Background */
+                            cream: '#F5F5F4',    /* Warm Light Gray/Cream card bg */
+                            muted: '#57534E',    /* Stone Gray text */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-brown selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full bg-brand-light/90 backdrop-blur-md z-50 border-b border-stone-200/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-brand-dark flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-brand-brown text-white flex items-center justify-center font-semibold text-sm">RW</span>
+                <span>Ratih Wulandari</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-muted">
+                <a href="#about" class="hover:text-brand-brown transition-colors">Tentang Saya</a>
+                <a href="#experience" class="hover:text-brand-brown transition-colors">Pengalaman</a>
+                <a href="#projects" class="hover:text-brand-brown transition-colors">Proyek Akademik</a>
+                <a href="#skills" class="hover:text-brand-brown transition-colors">Keahlian</a>
+                <a href="#education" class="hover:text-brand-brown transition-colors">Pendidikan</a>
+            </div>
+
+            <!-- Header CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-dark text-white text-sm font-medium hover:bg-brand-brown transition-all duration-300 shadow-sm hover:shadow">
+                    Hubungi Saya
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-b border-stone-200 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-brand-muted hover:text-brand-brown py-1 font-medium">Tentang Saya</a>
+            <a href="#experience" class="block text-brand-muted hover:text-brand-brown py-1 font-medium">Pengalaman</a>
+            <a href="#projects" class="block text-brand-muted hover:text-brand-brown py-1 font-medium">Proyek Akademik</a>
+            <a href="#skills" class="block text-brand-muted hover:text-brand-brown py-1 font-medium">Keahlian</a>
+            <a href="#education" class="block text-brand-muted hover:text-brand-brown py-1 font-medium">Pendidikan</a>
+            <a href="#contact" class="block w-full text-center px-4 py-2 rounded-lg bg-brand-brown text-white text-sm font-medium mt-3">
+                Hubungi Saya
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 px-6 max-w-6xl mx-auto min-h-[90vh] flex items-center">
+        <div class="grid md:grid-cols-12 gap-12 items-center w-full">
+            
+            <!-- Left Text Column -->
+            <div class="md:col-span-7 space-y-6 order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-stone-200/70 text-brand-brown text-xs font-semibold tracking-wide">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    S1 Sistem Informasi | Universitas Bani Saleh
+                </div>
+                
+                <div class="space-y-3">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-dark leading-tight">
+                        Halo, Saya <br class="hidden sm:inline"/><span class="text-brand-brown">Ratih Wulandari</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-stone-600 font-medium italic border-l-2 border-brand-brown pl-4 py-0.5">
+                        "Berani Mencoba, Siap Berkembang"
+                    </p>
+                </div>
+
+                <p class="text-brand-muted leading-relaxed max-w-xl text-base">
+                    Lulusan Sistem Informasi (S.Kom) dengan kombinasi pengalaman kerja profesional di bidang 
+                    <strong>Quality Control &amp; Produksi</strong> serta dasar analisis proses bisnis, perancangan sistem informasi, dan pengelolaan data.
+                </p>
+
+                <!-- Hero CTA Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#contact" class="px-7 py-3.5 rounded-full bg-brand-dark text-white font-medium text-sm hover:bg-brand-brown transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                        <span>Hubungi Saya</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#projects" class="px-7 py-3.5 rounded-full bg-stone-200/80 text-brand-dark font-medium text-sm hover:bg-stone-300/80 transition-all duration-300">
+                        Lihat Proyek
+                    </a>
+                </div>
+
+                <!-- Quick Info Badges -->
+                <div class="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-stone-200">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-stone-400 font-semibold">Lokasi</span>
+                        <span class="text-sm font-medium text-stone-700">Bekasi, Jawa Barat</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-stone-400 font-semibold">Fokus Bidang</span>
+                        <span class="text-sm font-medium text-stone-700">Admin &amp; Data Entry</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-stone-400 font-semibold">Status Kerja</span>
+                        <span class="text-sm font-medium text-stone-700">Open to Work</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Photo Column -->
+            <div class="md:col-span-5 order-1 md:order-2 flex justify-center">
+                <div class="relative group w-full max-w-xs sm:max-w-sm">
+                    <!-- Outer Decorative Accent Ring -->
+                    <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-brown to-stone-400 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                    
+                    <!-- Profile Card Box -->
+                    <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-stone-200/80">
+                        <div class="overflow-hidden rounded-xl bg-stone-100 aspect-[3/4] relative">
+                            <img src="assets/proyek/gambar.jpg" 
+                                 class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x800/1c1917/ffffff?text=Ratih+Wulandari';" />
+                        </div>
+                        <div class="mt-3 px-2 py-1 text-center">
+                            <h3 class="font-semibold text-brand-dark">Ratih Wulandari, S.Kom.</h3>
+                            <p class="text-xs text-brand-muted">Administrasi | Data Entry | IT Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 bg-stone-100/70 border-y border-stone-200/70 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                
+                <div class="md:w-1/3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-brown">Tentang Saya</span>
+                    <h2 class="text-3xl font-bold text-brand-dark mt-2 leading-tight">Dedikasi, Ketelitian, dan Kemauan Belajar</h2>
+                    <div class="w-16 h-1 bg-brand-brown mt-4 rounded-full"></div>
+                </div>
+
+                <div class="md:w-2/3 space-y-4 text-stone-700 leading-relaxed text-base">
+                    <p class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
+                        Saya merupakan Lulusan <strong>S1 Sistem Informasi Universitas Bani Saleh (2026)</strong> dengan Surat Keterangan Lulus (SKL). Memiliki kombinasi latar belakang pendidikan teknologi informasi dan pengalaman kerja di bidang <strong>Quality Control (QC), produksi, dan pengemasan (packing)</strong> di industri manufaktur.
+                    </p>
+                    <p class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
+                        Melalui proyek akademik, saya telah memahami dasar analisis proses bisnis, perancangan sistem informasi, serta alur pengembangan website. Saat ini saya terus mengasah kemampuan dalam pengolahan data menggunakan Microsoft Excel. Terbiasa bekerja teliti, disiplin mengikuti SOP, menyusun laporan inspeksi, dan berkoordinasi secara efektif dalam tim.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & PROJECTS SECTION -->
+    <section id="experience" class="py-20 px-6 max-w-6xl mx-auto">
+        
+        <!-- Experience Subsection -->
+        <div class="mb-20">
+            <div class="mb-10 text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-brown">Rekam Jejak Karir</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-2">Pengalaman Kerja</h2>
+                <p class="text-brand-muted mt-2 text-sm">Pengalaman kerja industri yang membentuk kedisiplinan dan ketelitian tingginya SOP.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- Experience Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-stone-100 text-brand-brown border border-stone-200">
+                                Apr 2022 - Des 2025
+                            </span>
+                            <i class="fa-solid fa-clipboard-check text-stone-400 text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark">Quality Control (QC) / QC Patrol</h3>
+                        <p class="text-sm font-medium text-brand-brown mt-0.5">PT Aneka Mitra Gemilang</p>
+                        
+                        <ul class="mt-4 space-y-2 text-xs text-stone-600 list-disc list-inside leading-relaxed">
+                            <li>Melakukan pemeriksaan kualitas produk sesuai standar perusahaan.</li>
+                            <li>Menentukan status produk OK/NG berdasarkan SOP inspeksi.</li>
+                            <li>Mengidentifikasi ketidaksesuaian produk dan melapor kepada atasan.</li>
+                            <li>Berkoordinasi dengan tim produksi jika ditemukan ketidaksesuaian.</li>
+                            <li>Membuat laporan hasil inspeksi secara akurat.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-stone-100 text-brand-brown border border-stone-200">
+                                Okt 2020 - Okt 2021
+                            </span>
+                            <i class="fa-solid fa-box text-stone-400 text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark">Packer Produksi</h3>
+                        <p class="text-sm font-medium text-brand-brown mt-0.5">PT Armstrong Industri Indonesia</p>
+                        
+                        <ul class="mt-4 space-y-2 text-xs text-stone-600 list-disc list-inside leading-relaxed">
+                            <li>Memeriksa dan menghitung jumlah serta kondisi produk sebelum packing.</li>
+                            <li>Melakukan pengemasan presisi sesuai standar &amp; prosedur perusahaan.</li>
+                            <li>Mengoperasikan mesin produksi sesuai SOP untuk menggantikan operator saat dibutuhkan.</li>
+                            <li>Menjaga kebersihan, kerapian, dan keamanan area kerja.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-stone-100 text-brand-brown border border-stone-200">
+                                Okt 2017 - Ags 2020
+                            </span>
+                            <i class="fa-solid fa-boxes-packing text-stone-400 text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark">Packer</h3>
+                        <p class="text-sm font-medium text-brand-brown mt-0.5">PT Mayora Indah &amp; PT Tirta Alam Segar</p>
+                        
+                        <ul class="mt-4 space-y-2 text-xs text-stone-600 list-disc list-inside leading-relaxed">
+                            <li>Melakukan pengemasan produk sesuai standar industri makanan &amp; minuman.</li>
+                            <li>Memastikan jumlah dan kondisi produk terjaga selama pengemasan.</li>
+                            <li>Menjaga kebersihan dan kerapian lingkungan kerja secara konsisten.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Academic Project Subsection -->
+        <div id="projects" class="pt-8">
+            <div class="mb-10 text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-brown">Implementasi Keilmuan</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-2">Proyek Akademik</h2>
+                <p class="text-brand-muted mt-2 text-sm">Penerapan analisis sistem informasi untuk menyelesaikan permasalahan nyata pada UMKM.</p>
+            </div>
+
+            <!-- Project Card Banner style -->
+            <div class="bg-gradient-to-r from-stone-900 to-stone-800 text-white rounded-3xl p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <!-- Background Geometric Decoration -->
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 rounded-full bg-brand-brown/20 blur-2xl pointer-events-none"></div>
+
+                <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-900/60 text-amber-200 text-xs font-medium border border-amber-700/50">       
+                            <i class="fa-solid fa-laptop-code"></i> Proyek Akhir / Studi Kasus
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white">
+                            Sistem Informasi Penjualan Berbasis Website - UMKM Barokah Catering
+                        </h3>
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            Mengembangkan solusi digitalisasi pemesanan untuk UMKM Barokah Catering yang sebelumnya mengandalkan pemesanan manual via WhatsApp.
+                        </p>
+                        
+                        <!-- Bullet Points -->
+                        <div class="grid sm:grid-cols-2 gap-3 pt-2 text-xs text-stone-300">
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                <span>Analisis alur bisnis pemesanan &amp; rekap penjualan</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                <span>Identifikasi kebutuhan pengguna (Admin &amp; Pelanggan)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                <span>Perancangan antarmuka &amp; basis data website</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                <span>Pengujian fungsionalitas dengan Black Box Testing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Badge & Highlight Column -->
+                    <div class="md:col-span-4 bg-stone-800/80 p-6 rounded-2xl border border-stone-700 flex flex-col justify-between h-full">
+                        <div>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-400 mb-3">Metode &amp; Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-md bg-stone-900 text-stone-200 text-xs font-medium">Analisis Sistem</span>
+                                <span class="px-3 py-1 rounded-md bg-stone-900 text-stone-200 text-xs font-medium">Flowchart &amp; UML</span>
+                                <span class="px-3 py-1 rounded-md bg-stone-900 text-stone-200 text-xs font-medium">Website Design</span>
+                                <span class="px-3 py-1 rounded-md bg-stone-900 text-stone-200 text-xs font-medium">Black Box Testing</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 border-t border-stone-700/80 pt-4">
+                            <span class="text-xs text-stone-400">Status Proyek:</span>
+                            <p class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5 mt-0.5">
+                                <i class="fa-solid fa-circle-check"></i> Selesai &amp; Diuji
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- GALERI DOKUMENTASI PROYEK -->
+<div class="mt-12">
+
+    <div class="mb-7">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-brown">
+            Dokumentasi Sistem
+        </span>
+        <h3 class="text-2xl font-bold text-brand-dark mt-2">
+            Hasil Implementasi Website
+        </h3>
+        <p class="text-brand-muted text-sm mt-2">
+            Dokumentasi tampilan antarmuka dan fitur sistem informasi
+            penjualan UMKM Barokah Catering.
+        </p>
+    </div>
+
+    <!-- Tampilan Website Pelanggan -->
+    <div class="mb-8">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="w-1 h-6 bg-amber-700 rounded-full"></span>
+            <h4 class="font-bold text-brand-dark">
+                01. Tampilan Website Pelanggan
+            </h4>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+            <!-- Beranda -->
+            <div class="md:col-span-2 bg-white rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                <div class="bg-stone-100 p-3">
+                    <img src="assets/proyek/g1.png"
+            
+                         class="w-full h-auto rounded-lg">
+                </div>
+                <div class="p-4">
+                    <h5 class="font-bold text-brand-dark text-sm">
+                        Halaman Beranda Website
+                    </h5>
+                    <p class="text-xs text-brand-muted mt-1">
+                        Tampilan utama website sebagai halaman
+                        informasi dan akses pemesanan pelanggan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Katalog Menu -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                <div class="bg-stone-100 p-3">
+                    <img src="assets/proyek/g2.png"
+                         alt="Katalog menu Barokah Catering"
+                         class="w-full h-auto rounded-lg">
+                </div>
+                <div class="p-4">
+                    <h5 class="font-bold text-brand-dark text-sm">
+                        Halaman Katalog Menu
+                    </h5>
+                    <p class="text-xs text-brand-muted mt-1">
+                        Menampilkan daftar produk, kategori,
+                        harga, dan detail menu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bukti Pembayaran -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                <div class="bg-stone-100 p-3 flex justify-center">
+                    <img src="assets/proyek/g3.png"
+                         alt="Bukti pembayaran pesanan"
+                         class="w-full max-w-xs h-auto rounded-lg">
+                </div>
+                <div class="p-4">
+                    <h5 class="font-bold text-brand-dark text-sm">
+                        Bukti Pembayaran
+                    </h5>
+                    <p class="text-xs text-brand-muted mt-1">
+                        Dokumentasi transaksi yang memuat
+                        rincian pesanan dan informasi pembayaran.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tampilan Dashboard Admin -->
+    <div class="mb-8">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="w-1 h-6 bg-amber-700 rounded-full"></span>
+            <h4 class="font-bold text-brand-dark">
+                02. Tampilan Dashboard Admin
+            </h4>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+            <!-- Dashboard -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                <div class="bg-stone-100 p-3">
+                    <img src="assets/proyek/g4.png"
+                         alt="Dashboard admin"
+                         class="w-full h-auto rounded-lg">
+                </div>
+                <div class="p-4">
+                    <h5 class="font-bold text-brand-dark text-sm">
+                        Dashboard Admin
+                    </h5>
+                    <p class="text-xs text-brand-muted mt-1">
+                        Menampilkan ringkasan pendapatan dan
+                        visualisasi data penjualan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Edit Menu -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                <div class="bg-stone-100 p-3">
+                    <img src="assets/proyek/g5.png"
+                         alt="Halaman pengelolaan menu"
+                         class="w-full h-auto rounded-lg">
+                </div>
+                <div class="p-4">
+                    <h5 class="font-bold text-brand-dark text-sm">
+                        Pengelolaan Menu
+                    </h5>
+                    <p class="text-xs text-brand-muted mt-1">
+                        Fitur admin untuk mengubah kategori,
+                        nama menu, harga, foto, dan deskripsi produk.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- AKHIR GALERI PROYEK -->
+
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 bg-stone-100/70 border-y border-stone-200/70 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12 text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-brown">Kompetensi Utama</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-2">Keahlian &amp; Kapabilitas</h2>
+                <p class="text-brand-muted mt-2 text-sm">Kombinasi keahlian teknis pengolahan data, analisis sistem, dan operasional manufaktur.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Category 1: Microsoft Office & Data Entry -->
+                <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-brand-brown flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark">Pengolahan Data &amp; Administrasi</h3>
+                            <p class="text-xs text-stone-500">Microsoft Office &amp; Input Data</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-xl bg-stone-50 border border-stone-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-semibold text-brand-dark">Microsoft Excel Formulas</span>
+                                <span class="text-xs text-brand-brown font-medium">Formula &amp; Pivot Table</span>
+                            </div>
+                            <!-- Skill Badges Grid -->
+                            <div class="flex flex-wrap gap-1.5 mt-2">
+                                <span class="px-2.5 py-0.5 rounded-md bg-white border border-stone-200 text-xs text-stone-700 font-mono font-medium">SUM</span>
+                                <span class="px-2.5 py-0.5 rounded-md bg-white border border-stone-200 text-xs text-stone-700 font-mono font-medium">AVERAGE</span>
+                                <span class="px-2.5 py-0.5 rounded-md bg-white border border-stone-200 text-xs text-stone-700 font-mono font-medium">IF</span>
+                                <span class="px-2.5 py-0.5 rounded-md bg-white border border-stone-200 text-xs text-stone-700 font-mono font-medium">COUNTIF</span>
+                                <span class="px-2.5 py-0.5 rounded-md bg-white border border-stone-200 text-xs text-stone-700 font-mono font-medium">SUMIF</span>
+                                <span class="px-2.5 py-0.5 rounded-md bg-white border border-stone-200 text-xs text-stone-700 font-mono font-medium">VLOOKUP</span>
+                                <span class="px-2.5 py-0.5 rounded-md bg-stone-200 text-xs text-brand-brown font-mono font-medium">PivotTable</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-stone-700">Microsoft Word &amp; Pengoperasian Komputer</span>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-stone-700">Input Data, Pemeriksaan Data, &amp; Penyusunan Laporan</span>
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: IT & Business Analysis -->
+                <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-brand-brown flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark">Sistem Informasi &amp; Industri</h3>
+                            <p class="text-xs text-stone-500">Analisis Sistem &amp; Control Quality</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-2 rounded-xl bg-stone-100 border border-stone-200 text-xs font-medium text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-chart text-brand-brown"></i>
+                            Dasar Analisis Proses Bisnis
+                        </span>
+                        <span class="px-3 py-2 rounded-xl bg-stone-100 border border-stone-200 text-xs font-medium text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-network-wired text-brand-brown"></i>
+                            Perancangan Sistem Informasi
+                        </span>
+                        <span class="px-3 py-2 rounded-xl bg-stone-100 border border-stone-200 text-xs font-medium text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-globe text-brand-brown"></i>
+                            Alur Pengembangan Website
+                        </span>
+                        <span class="px-3 py-2 rounded-xl bg-stone-100 border border-stone-200 text-xs font-medium text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-eye text-brand-brown"></i>
+                            Quality Control &amp; Visual Inspection
+                        </span>
+                        <span class="px-3 py-2 rounded-xl bg-stone-100 border border-stone-200 text-xs font-medium text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-book-bookmark text-brand-brown"></i>
+                            Penerapan SOP Industri
+                        </span>
+                        <span class="px-3 py-2 rounded-xl bg-stone-100 border border-stone-200 text-xs font-medium text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-industry text-brand-brown"></i>
+                            Pengoperasian Mesin Produksi &amp; Packing
+                        </span>
+                    </div>
+
+                    <!-- Personal Attributes -->
+                    <div class="mt-6 pt-5 border-t border-stone-100">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-2">Karakter Kerja</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 text-xs text-stone-600 font-medium">Teliti</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 text-xs text-stone-600 font-medium">Disiplin</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 text-xs text-stone-600 font-medium">Bertanggung Jawab</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 text-xs text-stone-600 font-medium">Kerja Sama Tim</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="mb-12 text-center max-w-2xl mx-auto">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-brown">Riwayat Studi</span>
+            <h2 class="text-3xl font-bold text-brand-dark mt-2">Pendidikan</h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+            
+            <!-- Degree Item -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-stone-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold text-brand-brown">Lulusan 2026 (SKL Tersedia)</span>
+                        <h3 class="text-lg font-bold text-brand-dark">S1 Sistem Informasi (S.Kom.)</h3>
+                        <p class="text-sm text-stone-600">Universitas Bani Saleh</p>
+                    </div>
+                </div>
+                <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full border border-emerald-200 shrink-0">
+                    S.Kom (SKL)
+                </span>
+            </div>
+
+            <!-- High School Item -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-stone-200 text-stone-700 flex items-center justify-center font-bold text-lg shrink-0">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold text-stone-500">2014 - 2017</span>
+                        <h3 class="text-lg font-bold text-brand-dark">SMA Negeri 1 Babelan</h3>
+                        <p class="text-sm text-stone-600">Jurusan IPA (Ilmu Pengetahuan Alam)</p>
+                    </div>
+                </div>
+                <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-semibold rounded-full border border-stone-200 shrink-0">
+                    Ijazah SMA
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-brand-dark text-white px-6 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                
+                <div class="md:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-500">Hubungi Saya</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold leading-tight">Mari Bekerja Sama &amp; Berkolaborasi</h2>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Saya terbuka untuk peluang kerja di bidang <strong>Administrasi, Data Entry, IT Support</strong>, maupun operasional industri. Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        
+                        <!-- Email Link -->
+                        <a href="mailto:wratih013@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-stone-800/80 hover:bg-stone-800 border border-stone-700 transition duration-300 group">
+                            <div class="w-10 h-10 rounded-lg bg-brand-brown text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-stone-400 block">Email</span>
+                                <span class="text-sm font-medium text-white group-hover:text-amber-400 transition-colors">wratih013@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone / WhatsApp Link -->
+                        <a href="https://wa.me/62895321873074" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-stone-800/80 hover:bg-stone-800 border border-stone-700 transition duration-300 group">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-700 text-white flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-stone-400 block">Telepon / WhatsApp</span>
+                                <span class="text-sm font-medium text-white group-hover:text-amber-400 transition-colors">0895321873074</span>
+                            </div>
+                        </a>
+
+                        <!-- Location Info -->
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-stone-800/80 border border-stone-700">
+                            <div class="w-10 h-10 rounded-lg bg-stone-700 text-stone-300 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-stone-400 block">Domisili</span>
+                                <span class="text-sm font-medium text-white">Babelan, Bekasi, Jawa Barat</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-950 text-stone-500 py-8 text-center text-xs border-t border-stone-800 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Ratih Wulandari, S.Kom. All rights reserved.</p>
+            <p class="text-stone-600">Portofolio Single-Page Responsive | Bekasi, Jawa Barat</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPT -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu on item click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+       
+    </script>
+</body>
+</html>
